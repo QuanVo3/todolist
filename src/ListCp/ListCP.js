@@ -28,7 +28,7 @@ class ListCP extends Component {
     addFilterList = (Item) => {
         let filter = this.state.filtered;
         filter.push(Item);
-        this.setState({ filtered: filter })
+        this.setState({ ...this.state.filtered, Item })
     }
     
     filterStatus = () => {
@@ -39,7 +39,7 @@ class ListCP extends Component {
         else {
 
             this.setState({ filterStatus: "enter" })
-
+            this.setState({filtered:[]})
         }
     }
     render() {
