@@ -24,6 +24,9 @@ class ListCP extends Component {
         let newArr = this.state.list;
         newArr.splice(newArr.indexOf(Item), 1);
         this.setState({ list: newArr });
+        let newArr2 = this.state.filtered;
+        newArr2.splice(newArr2.indexOf(Item), 1);
+        this.setState({ filtered: newArr2 });
     }
     addFilterList = (Item) => {
         let filter = this.state.filtered;
